@@ -1,95 +1,50 @@
-import Image from 'next/image'
+'use client'
+
 import styles from './page.module.css'
+import * as Profile from '../assets/112487-sample.json'
+import * as NikeLogo from '../assets/NikeLogo.json'
+import * as Title from '../assets/Bouncing-period-[remix].json'
+import Lottie from 'lottie-react'
 
 export default function Home() {
+
+  const nikeDefaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: NikeLogo,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+  const titleDefaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: NikeLogo,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <h1 className={styles.title}>Animation Demo Title</h1>
+      <div className={styles.animation}>
+        <Lottie animationData={Profile} options={nikeDefaultOptions}/>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi itaque nam necessitatibus, nemo quo repudiandae. Dolores facere iure, natus nemo praesentium provident quae recusandae repellat! Architecto culpa omnis quia?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi itaque nam necessitatibus, nemo quo repudiandae. Dolores facere iure, natus nemo praesentium provident quae recusandae repellat! Architecto culpa omnis quia?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi itaque nam necessitatibus, nemo quo repudiandae. Dolores facere iure, natus nemo praesentium provident quae recusandae repellat! Architecto culpa omnis quia?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eligendi itaque nam necessitatibus, nemo quo repudiandae. Dolores facere iure, natus nemo praesentium provident quae recusandae repellat! Architecto culpa omnis quia?</p>
+      <div className={styles.container}>
+        <div className={styles.animation}>
+          <Lottie animationData={Title} options={titleDefaultOptions}/>
+        </div>
+        <div className={styles.animation}>
+          <Lottie animationData={NikeLogo} options={titleDefaultOptions}/>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   )
 }
