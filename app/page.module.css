@@ -1,17 +1,18 @@
 .main {
-
+    background-color: black;
 }
 
 .title {
+    color: white;
     padding: 2rem 1rem;
     border-bottom: 1px solid gray;
 }
 
 .animation {
-    width: 400px;
+    width: 800px;
     margin: auto;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
+.container p {
+    color: white;
 }
+
